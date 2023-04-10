@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-admin-ui
+  name: mango-admin-ui
   labels:
-    app: go-admin-ui
+    app: mango-admin-ui
     service: go-admim-ui
 spec:
   ports:
@@ -12,29 +12,29 @@ spec:
       name: http
       protocol: TCP
   selector:
-    app: go-admin-ui
+    app: mango-admin-ui
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-admin-ui-v1
+  name: mango-admin-ui-v1
   labels:
-    app: go-admin-ui
+    app: mango-admin-ui
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: go-admin-ui
+      app: mango-admin-ui
       version: v1
   template:
     metadata:
       labels:
-        app: go-admin-ui
+        app: mango-admin-ui
         version: v1
     spec:
       containers:
-        - name: go-admin-ui
+        - name: mango-admin-ui
           image: ${IMAGE}
           imagePullPolicy: IfNotPresent
           ports:
