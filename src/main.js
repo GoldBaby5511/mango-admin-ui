@@ -84,7 +84,7 @@ Vue.use(VueDND)
 
 import 'remixicon/fonts/remixicon.css'
 
-console.info(`欢迎使用go-admin，谢谢您对我们的支持，在使用过程中如果有什么问题，
+console.info(`欢迎使用mango-admin，谢谢您对我们的支持，在使用过程中如果有什么问题，
 请访问https://github.com/mango-admin-team/mango-admin 或者
  https://github.com/mango-admin-team/mango-admin-ui 向我们反馈，
  谢谢！`)
